@@ -65,7 +65,7 @@ python -m unittest discover tests -v
 ## CI (ЛР №5)
 
 GitHub Actions: `.github/workflows/main.yml`  
-На каждый push гоняет тесты на `ubuntu-latest` и `windows-latest`.  
+На push/PR в `main` (и вручную) гоняет тесты на `ubuntu-latest`.  
 Как устроено: `docs/CI.md`
 
 ## История изменений
@@ -77,4 +77,6 @@ GitHub Actions: `.github/workflows/main.yml`
 | `5d78d814a2a60c667c73595ce1fd1d4699d901fe` | add circle fuction notation |
 | `39b2f2f843564c8996bae8f6dfa564684d8fad18` | add square fuction notation |
 | `673ca00614d31b8030fe3b82b4b0718da37a8658` | update documentation |
-| — | added lab work 4 |
+| `3fe462b86ddf5e4c82ee9ed90f13e322daaf547a` | added lab work 4 |
+| `2255b1adeeec08a44b96df2d0a9366e0cb291c5b` | added lab work 5 |
+| — | fix lab5 workflow |

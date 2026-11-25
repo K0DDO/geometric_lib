@@ -6,15 +6,16 @@
 ## Что сделано
 
 Файл `.github/workflows/main.yml`:
-- запускается на каждый `push`
+- запускается на `push` / `pull_request` в `main` и вручную (`workflow_dispatch`)
+- job `build` на `ubuntu-latest`
 - гоняет тесты ЛР4: `python -m unittest discover tests -v`
-- на двух runners: `ubuntu-latest` и `windows-latest`
+- у шага с тестами стоит `continue-on-error: true`
 
 ## Как посмотреть результат
 
 1. Открыть репозиторий на GitHub
 2. Вкладка **Actions**
-3. Выбрать последний workflow **Unit tests**
+3. Выбрать последний workflow **CI**
 4. Сделать скриншот для отчёта
 
 ## Как писать такой файл (по материалам из лабы)
