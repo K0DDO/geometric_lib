@@ -62,6 +62,12 @@ perimeter(3, 4, 5)
 python -m unittest discover tests -v
 ```
 
+## CI (ЛР №5)
+
+GitHub Actions: `.github/workflows/main.yml`  
+На каждый push гоняет тесты на `ubuntu-latest` и `windows-latest`.  
+Как устроено: `docs/CI.md`
+
 ## История изменений
 
 | Хеш | Описание |
