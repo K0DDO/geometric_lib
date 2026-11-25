@@ -1,46 +1,65 @@
 # Geometric Lib — документация
 
-## Общее описание решения
+## Общее описание
 
-`geometric_lib` — небольшая Python-библиотека для расчёта площади и периметра простых геометрических фигур.  
-Сейчас реализованы модули для **круга** (`circle.py`) и **квадрата** (`square.py`). Каждый модуль предоставляет две функции: `area` и `perimeter`.
+Библиотека на Python для площади и периметра фигур:  
+круг, квадрат, прямоугольник, треугольник.
 
-## Описание функций
+## Функции
 
-### `circle.area(r)`
+### Круг (`circle.py`)
 
-Принимает радиус круга `r`, возвращает площадь: \(S = \pi r^2\).
+- `area(r)` — площадь, `πr²`
+- `perimeter(r)` — длина окружности, `2πr`
 
 ```python
-from circle import area
-print(area(5))  # 78.53981633974483
+from circle import area, perimeter
+area(5)
+perimeter(5)
 ```
 
-### `circle.perimeter(r)`
+### Квадрат (`square.py`)
 
-Принимает радиус круга `r`, возвращает длину окружности, то есть периметр: \(P = 2\pi r\).
+- `area(a)` — `a²`
+- `perimeter(a)` — `4a`
 
 ```python
-from circle import perimeter
-print(perimeter(5))  # 31.41592653589793
+from square import area, perimeter
+area(4)
+perimeter(4)
 ```
 
-### `square.area(a)`
+### Прямоугольник (`rectangle.py`)
 
-Принимает сторону квадрата `a`, возвращает площадь: \(S = a^2\).
+- `area(a, b)` — `a * b`
+- `perimeter(a, b)` — ожидаем `2*(a+b)`
 
 ```python
-from square import area
-print(area(4))  # 16
+from rectangle import area, perimeter
+area(10, 5)
+perimeter(10, 5)
 ```
 
-### `square.perimeter(a)`
+### Треугольник (`triangle.py`)
 
-Принимает сторону квадрата `a`, возвращает периметр: \(P = 4a\).
+- `area(a, b, c)` — площадь по трём сторонам (Герону)
+- `perimeter(a, b, c)` — `a+b+c`
 
 ```python
-from square import perimeter
-print(perimeter(4))  # 16
+from triangle import area, perimeter
+area(3, 4, 5)
+perimeter(3, 4, 5)
+```
+
+## Тесты (ЛР №4)
+
+Файлы в папке `tests/`: `test_circle.py`, `test_square.py`, `test_rectangle.py`, `test_triangle.py`  
+План тестирования: `docs/TEST_PLAN.md`
+
+Запуск из корня `geometric_lib`:
+
+```bash
+python -m unittest discover tests -v
 ```
 
 ## История изменений
@@ -51,4 +70,5 @@ print(perimeter(4))  # 16
 | `d078c8d9ee6155f3cb0e577d28d337b791de28e2` | L-03: Docs added |
 | `5d78d814a2a60c667c73595ce1fd1d4699d901fe` | add circle fuction notation |
 | `39b2f2f843564c8996bae8f6dfa564684d8fad18` | add square fuction notation |
-| — | update documentation |
+| `673ca00614d31b8030fe3b82b4b0718da37a8658` | update documentation |
+| — | added lab work 4 |
